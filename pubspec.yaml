@@ -1,0 +1,23 @@
+name: flutter_sleeping_hours_slider
+description: A customizable widget to select sleeping hours in a circular line.
+version: 0.0.1
+author: Juyoung Lee <dev.juyoung@gmail.com>
+homepage: https://github.com/dev-juyoung/flutter_sleeping_hours_slider
+repository: https://github.com/dev-juyoung/flutter_sleeping_hours_slider
+issue_tracker: https://github.com/dev-juyoung/flutter_sleeping_hours_slider/issues
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: dev.juyoung.flutter_sleeping_hours_slider
+    pluginClass: FlutterSleepingHoursSliderPlugin
