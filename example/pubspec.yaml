@@ -1,5 +1,6 @@
 name: flutter_sleeping_hours_slider_example
 description: Demonstrates how to use the flutter_sleeping_hours_slider plugin.
+version: 1.0.0+1
 publish_to: 'none'
 
 environment:
@@ -20,3 +21,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/

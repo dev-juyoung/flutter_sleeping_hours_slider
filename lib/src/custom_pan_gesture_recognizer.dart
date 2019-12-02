@@ -1,0 +1,44 @@
+import 'package:meta/meta.dart';
+
+import 'package:flutter/gestures.dart';
+
+class CustomPanGestureRecognizer extends OneSequenceGestureRecognizer {
+  final Function onPanDown;
+  final Function onPanUpdate;
+  final Function onPanEnd;
+
+  CustomPanGestureRecognizer({
+    @required this.onPanDown,
+    @required this.onPanUpdate,
+    @required this.onPanEnd,
+  });
+
+  @override
+  String get debugDescription => 'customPan';
+
+  @override
+  void addPointer(PointerDownEvent event) {
+    if (onPanDown(event.position)) {
+      startTrackingPointer(event.pointer);
+      resolve(GestureDisposition.accepted);
+    } else {
+      stopTrackingPointer(event.pointer);
+    }
+
+    super.addPointer(event);
+  }
+
+  @override
+  void handleEvent(PointerEvent event) {
+    if (event is PointerMoveEvent) {
+      onPanUpdate(event.position);
+    }
+    if (event is PointerUpEvent) {
+      onPanEnd(event.position);
+      stopTrackingPointer(event.pointer);
+    }
+  }
+
+  @override
+  void didStopTrackingLastPointer(int pointer) {}
+}
