@@ -1,7 +1,6 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 import 'circular_slider_paint.dart';
 

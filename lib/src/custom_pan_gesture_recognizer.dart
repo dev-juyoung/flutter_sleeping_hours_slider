@@ -1,6 +1,5 @@
-import 'package:meta/meta.dart';
-
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 
 class CustomPanGestureRecognizer extends OneSequenceGestureRecognizer {
   final Function onPanDown;
