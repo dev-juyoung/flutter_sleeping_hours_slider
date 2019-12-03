@@ -55,13 +55,13 @@ class _DemoAppState extends State<DemoApp> {
       _endValue = 102;
     });
 
-    _loadAssetImage('assets/icon_night_clock.png').then((image) {
+    _loadAssetImage('assets/icon_night.png').then((image) {
       setState(() {
         _initHandlerImage = image;
       });
     });
 
-    _loadAssetImage('assets/icon_day_clock.png').then((image) {
+    _loadAssetImage('assets/icon_day.png').then((image) {
       setState(() {
         _endHandlerImage = image;
       });
